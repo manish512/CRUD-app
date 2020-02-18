@@ -1,0 +1,33 @@
+# docker-compose.yml
+version: '3'
+services:
+  redis:
+    image: 'redis:3.2-alpine'
+    ports:
+      - 6379:6379
+    command: redis-server --appendonly yes
+  flask:
+    image: flask
+    build:
+      context: .
+      dockerfile: Dockerfile-Flask
+    ports:
+      - 5000:5000
+  nginx:
+    image: webapp-nginx
+    build:
+      context: .
+      dockerfile: Dockerfile-Nginx
+    ports:
+      - 80:80
+    depends_on:
+      - flask
+  postgres:
+    restart: always    
+    image: postgres:10    
+    environment:      
+        - POSTGRES_USER=postgres      
+        - POSTGRES_PASSWORD=12345678     
+        - POSTGRES_DB=crud       
+    ports:      
+        - "5432:5432"

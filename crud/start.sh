@@ -1,0 +1,1 @@
+celery -A app.celery worker & uwsgi --ini ./app.ini

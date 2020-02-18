@@ -1,0 +1,2 @@
+2020/02/08 21:06:10 [error] 7212#12432: *1 CreateFile() "F:\ClaimFound\CRUD app\nginx-1.17.8\nginx-1.17.8/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"
+2020/02/08 21:12:03 [error] 7212#12432: *4 CreateFile() "F:\ClaimFound\CRUD app\nginx-1.17.8\nginx-1.17.8/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost"

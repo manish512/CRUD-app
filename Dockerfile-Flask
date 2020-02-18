@@ -1,0 +1,23 @@
+FROM python:3
+
+
+RUN pwd
+RUN mkdir /app
+WORKDIR /app
+
+
+EXPOSE 5000
+EXPOSE 6379
+
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+
+COPY ./crud .
+
+
+ENV APP_SETTINGS config.DevelopmentConfig
+ENV DATABASE_URL postgresql://postgres:12345678@postgres:5432/crud
+
+CMD [ "sh", "./start.sh" ]
