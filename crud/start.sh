@@ -1,1 +1,1 @@
-celery -A app.celery worker & uwsgi --ini ./app.ini
+python manage.py db upgrade & celery -A app.celery worker & uwsgi --ini ./app.ini
