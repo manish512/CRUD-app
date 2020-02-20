@@ -541,7 +541,7 @@ let UserComponent = class UserComponent {
     }
     update_bulk() {
         this.flaskclientService.update_bulk().subscribe(response => {
-            alert(response);
+            alert("Update Started");
         });
     }
     edit_blog(id) {

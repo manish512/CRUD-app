@@ -39,7 +39,7 @@ export class UserComponent implements OnInit {
   update_bulk() {
     this.flaskclientService.update_bulk().subscribe(
       response => {
-        alert(response);
+        alert("Update Started");
       }
     )
   }

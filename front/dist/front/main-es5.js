@@ -559,7 +559,7 @@ var UserComponent = /** @class */ (function () {
     };
     UserComponent.prototype.update_bulk = function () {
         this.flaskclientService.update_bulk().subscribe(function (response) {
-            alert(response);
+            alert("Update Started");
         });
     };
     UserComponent.prototype.edit_blog = function (id) {
