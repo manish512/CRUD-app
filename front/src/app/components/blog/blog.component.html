@@ -1,0 +1,22 @@
+<div *ngIf="!update">
+    {{blog.title}}
+    {{blog.text}}
+</div>
+<div *ngIf="update">
+    <H1>Edit Blog</H1>
+    <form>
+
+        <div style="width: 90%;">
+            <input input="Title" [(ngModel)]="title" name="title" style="width: 90%;" required value={{blog.title}}>
+        </div>
+        <p></p>
+        <div style="width: 90%; height: 50vh;">
+            <textarea input="Text" [(ngModel)]="text" name="text" style="width: 90%; height: 100%;" required
+                value={{blog.text}}></textarea>
+        </div>
+        <p></p>
+
+    </form>
+    <button (click)="update_blog(blog.id)" color="primary">Save</button>
+
+</div>

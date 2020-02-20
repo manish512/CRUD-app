@@ -1,0 +1,19 @@
+<div>
+  <p>
+    Here is a list of blogs you have
+  </p>
+</div>
+<div>
+  <table>
+    <tr *ngFor=" let blog of blogs;">
+      <td><a href="blog/{{blog.id}}">{{blog.title}}</a></td>
+      <td><button (click)="edit_blog(blog.id)">Edit</button></td>
+      <td><button (click)="delete_blog(blog.id)">Delete</button></td>
+    <tr>
+  </table>
+  <button id="new-btn" (click)="add_new_blog()" color="primary">Add new blog</button>
+</div>
+<div>
+  Click this button to edit all the blogs in Bulk using celery
+  <button (click)="update_bulk()">Update Bulk</button>
+</div>

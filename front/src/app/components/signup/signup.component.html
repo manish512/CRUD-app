@@ -1,0 +1,27 @@
+<div>
+    <H1>Sign UP</H1>
+    <form>
+        <table cellspacing="0">
+            <tr>
+                <td>
+                    <p>
+                        <label>Name</label>
+                        <br />
+                        <input input="name" [(ngModel)]="name" name="name" required>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+
+                        <label>Username</label>
+                        <br />
+                        <input input="handle" [(ngModel)]="handle" type="password" name="password" required>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <button (click)="signup()" color="primary">Sign up</button>
+</div>
