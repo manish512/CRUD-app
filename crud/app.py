@@ -43,7 +43,7 @@ def sleep_and_edit():
 @app.route('/api/autoedit_blogs', methods=['GET'])
 def autoedit_tasks():
     task = sleep_and_edit.delay()
-    return "Task started"
+    return jsonify({"response": "Task started"})
 
 
 @app.route("/api/add")
@@ -78,7 +78,7 @@ def add_blog():
         )
         db.session.add(blog)
         db.session.commit()
-        return "Blog added. Blog id={}".format(blog.id)
+        return jsonify({"response": "Blog added"})
     except Exception as e:
         return(str(e))
 
