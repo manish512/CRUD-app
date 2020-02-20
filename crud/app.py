@@ -127,7 +127,7 @@ def get_blog_by_id():
     except Exception as e:
         return(str(e))
 
-@app.route("/deleteBlog")
+@app.route("/api/deleteBlog")
 def delete_blog_by_id():
     try:
         Blog.query.filter_by(id=request.args.get('id')).delete()
@@ -136,7 +136,7 @@ def delete_blog_by_id():
     except Exception as e:
         return(str(e))
 
-@app.route("/update_blog", methods=['POST'])
+@app.route("/api/update_blog", methods=['POST'])
 def update_blog():
     try:
         content = request.json
