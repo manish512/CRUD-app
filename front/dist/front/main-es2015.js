@@ -52,7 +52,7 @@ module.exports = "<div *ngIf=\"!update\">\n    {{blog.title}}\n    {{blog.text}}
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--<p>crud works!</p>-->\n<!--<ul>-->\n<!--  <li *ngFor=\" let user of users;\">-->\n<!--    <a href=\"/handle/{{user.handle}}\">{{user.handle}}</a>-->\n<!--  </li>-->\n<!--</ul>-->\n\n<div>\n  <H1>Login</H1>\n  <form>\n    <table cellspacing=\"0\">\n      <tr>\n        <td>\n          <p>\n            <input input=\"Username\" [(ngModel)]=\"username\" name=\"username\" required>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            <input input=\"Password\" [(ngModel)]=\"password\" type=\"password\" name=\"password\" required>\n          </p>\n        </td>\n      </tr>\n    </table>\n  </form>\n  <button (click)=\"login()\" color=\"primary\">Login</button>\n</div>"
+module.exports = "<!--<p>crud works!</p>-->\n<!--<ul>-->\n<!--  <li *ngFor=\" let user of users;\">-->\n<!--    <a href=\"/handle/{{user.handle}}\">{{user.handle}}</a>-->\n<!--  </li>-->\n<!--</ul>-->\n\n<div>\n  <H1>Login</H1>\n  <form>\n    <table cellspacing=\"0\">\n      <tr>\n        <td>\n          <p>\n            <label>Username</label>\n            <br />\n            <input input=\"Username\" [(ngModel)]=\"username\" name=\"username\" required>\n          </p>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          <p>\n            <label>Password (It is \"admin\")</label>\n            <br />\n            <input input=\"Password\" [(ngModel)]=\"password\" type=\"password\" name=\"password\" required>\n          </p>\n        </td>\n      </tr>\n    </table>\n  </form>\n  <button (click)=\"login()\" color=\"primary\">Login</button>\n  <input type=\"button\" onclick=\"location.href='/signup'\" value=\"Sign up\">\n</div>"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<!--<p>crud works!</p>-->\n<!--<ul>-->\n<!--  <li *ngFor=\" le
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n    <H1>Sign UP</H1>\n    <form>\n        <table cellspacing=\"0\">\n            <tr>\n                <td>\n                    <p>\n                        <input input=\"name\" [(ngModel)]=\"name\" name=\"name\" required>\n                    </p>\n                </td>\n            </tr>\n            <tr>\n                <td>\n                    <p>\n                        <input input=\"handle\" [(ngModel)]=\"handle\" type=\"password\" name=\"password\" required>\n                    </p>\n                </td>\n            </tr>\n        </table>\n    </form>\n    <button (click)=\"signup()\" color=\"primary\">Login</button>\n</div>"
+module.exports = "<div>\n    <H1>Sign Up</H1>\n    <form>\n        <table cellspacing=\"0\">\n            <tr>\n                <td>\n                    <p>\n                        <label>Name</label>\n                        <br />\n                        <input input=\"name\" [(ngModel)]=\"name\" name=\"name\" required>\n                    </p>\n                </td>\n            </tr>\n            <tr>\n                <td>\n                    <p>\n\n                        <label>Username</label>\n                        <br />\n                        <input input=\"handle\" [(ngModel)]=\"handle\" type=\"password\" name=\"password\" required>\n                    </p>\n                </td>\n            </tr>\n        </table>\n    </form>\n    <button (click)=\"signup()\" color=\"primary\">Sign up</button>\n</div>"
 
 /***/ }),
 
